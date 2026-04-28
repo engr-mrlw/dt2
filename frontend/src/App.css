@@ -1,0 +1,141 @@
+/* ------------------------------
+   GLOBAL LAYOUT
+--------------------------------*/
+.app-container {
+  padding: 20px;
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Title */
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Entry Counter */
+.entry-counter {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+/* API Token Box */
+.api-token-box {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  width: 250px;
+}
+
+/* ------------------------------
+   PANELS
+--------------------------------*/
+.left-panel {
+  border-right: 2px solid var(--divider);
+  height: 85vh;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.right-panel {
+  height: 85vh;
+  overflow-y: auto;
+  padding-left: 15px;
+}
+
+/* Buttons */
+.button-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.backend-row {
+  margin-top: 10px;
+}
+
+/* Version text */
+.version {
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ------------------------------
+   BARCODE SCANNER MODAL
+--------------------------------*/
+#interactive.viewport {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+#interactive video {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------
+   DARK MODE THEME
+--------------------------------*/
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --divider: #ccc;
+  --muted: #666;
+  --card-bg: #f5f5f5;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --divider: #555;
+  --muted: #999;
+  --card-bg: #1e1e1e;
+}
+
+body.dark .card-panel {
+  background: var(--card-bg) !important;
+  color: var(--text);
+}
+
+body.dark .left-panel {
+  border-right-color: var(--divider);
+}
+
+body.dark input,
+body.dark select {
+  color: var(--text);
+}
+
+body.dark .modal {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+/* Scrollbar styling */
+.left-panel::-webkit-scrollbar,
+.right-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-panel::-webkit-scrollbar-thumb,
+.right-panel::-webkit-scrollbar-thumb {
+  background: var(--divider);
+  border-radius: 4px;
+}
